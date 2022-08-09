@@ -1,0 +1,16 @@
+A=str(input("문자열 A를 입력하세요")).lower()
+B=str(input("문자열 B를 입력하세요")).lower()
+
+len(A)<=50
+len(B)<=50
+
+rs=[]
+
+for i in range(len(B)-len(A)+1):
+    oc=0
+    for j in range(len(A)):
+        if A[j]!=B[j+i]:
+            oc+=1
+    rs.append(oc)
+
+print(min(rs))
